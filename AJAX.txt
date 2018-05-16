@@ -1,0 +1,31 @@
+AJAX = 异步 JavaScript 和 XML。
+AJAX 是一种用于创建快速动态网页的技术。
+通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
+传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。
+有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。
+创建XMLHttpRequest对象
+创建XMLHttpRequest的语法：
+variable=new XMLHttpRequest（）；
+老版本的IE（IE5、IE6）使用ActiveX对象：
+variable=new ActiveXobject（“Microsoft，XMLHTTP”）;
+
+向服务器发送请求
+使用XMLHttpRequest对象的open（）和send（）方法：
+方法				描述
+open(method,url,async)	
+				规定请求的类型、URL 以及是否异步处理请求。
+				method：请求的类型；GET 或 POST
+				url：文件在服务器上的位置
+				async：true（异步）或 false（同步）
+send(string)	
+				将请求发送到服务器。
+				string：仅用于 POST 请求
+
+服务器响应
+responseText	获得字符串形式的响应数据。
+responseXML	获得 XML 形式的响应数据。
+
+1.创建对象 var oAJax=new XMLHttpRequest;
+2.连接服务器 open（）；
+3.发送请求 send（）；
+4.接收信息 responseText；
